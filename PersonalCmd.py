@@ -1,4 +1,3 @@
-
 import time
 import os
 import socket
@@ -11,10 +10,12 @@ def shtdown(tm=[]):
 	#it shuts down your system (Be Careful)
 
 	if tm==[]:
-		os.system("shutdown /s /t 0")
+		#os.system("shutdown /s /t 0")
+		print("shutdown")
 	else:
 		time.sleep(int(tm[0]))
-		os.system("shutdown /s /t 0")
+		#os.system("shutdown /s /t 0")
+		print("shutdown")
 
 def opfile(d=[]):
 	#you can open text files only
@@ -26,6 +27,19 @@ def opfile(d=[]):
 			with open(dir) as file:
 				content=file.read()
 				print(content)
+		except Exception:
+			print("There Was an Error with Your Command!\nMaybe You Have Used an Invalid File Address\n"
+			+"or Unsupported Files(This Virsion Supports Only Text Files!)")
+
+def delf(d=[]):
+	'''To Delete any Type Of file'''
+	if d==[]:
+		print("You Should Enter Address after Command (For Example: delf E:\\file.txt)\nTry Again.")
+	else:
+		dir=d[0]
+		try:
+			os.remove(dir)
+			print("The File Has been Removed!")
 		except Exception:
 			print("There Was an Error with Your Command!\nMaybe You Have Used an Invalid File Address\n"
 			+"or Unsupported Files(This Virsion Supports Only Text Files!)")
@@ -126,7 +140,7 @@ def cbground():
 
 
 #List of Commands with 1 or more Arguments(Keyswords and functions)
-command1 = {"shtdwn" : shtdown, "opfile" : opfile,  "rstart":rstart}
+command1 = {"shtdwn" : shtdown, "opfile" : opfile,  "rstart":rstart, "delf":delf}
 
 #List of Command with no Argument(Keyswords and functions)
 command2={"hlp" : hlp, "scnprt":scnprt, "sysinfo":sysinfo, "userlist":userlist,
@@ -135,7 +149,8 @@ command2={"hlp" : hlp, "scnprt":scnprt, "sysinfo":sysinfo, "userlist":userlist,
 
 while True:
 
-	comm, *t =input(">> ").split()
+	com, *t =input(">> ").split()
+	comm=com.lower()
 
 	if comm in command1.keys():
 		command1[comm](t)
