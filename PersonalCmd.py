@@ -11,12 +11,10 @@ def shtdown(tm=[]):
 	#it shuts down your system (Be Careful)
 
 	if tm==[]:
-		#os.system("shutdown /s /t 0")
-		print("shutdown")
+		os.system("shutdown /s /t 0")
 	else:
 		time.sleep(int(tm[0]))
-		#os.system("shutdown /s /t 0")
-		print("shutdown")
+		os.system("shutdown /s /t 0")
 
 def opfile(d=[]):
 	#you can open text files only
