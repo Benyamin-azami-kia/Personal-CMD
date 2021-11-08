@@ -30,4 +30,8 @@ _6)userlist_
 	
 _7)cbground addr_
 
-(This Command Will Change Your Desktop Wallpaper, You Should Enter The Photo Address After Command (addr). (and it only works on Windows) )
+(This Command Will Change Your Desktop Wallpaper, You Should Enter The Photo Address After Command (addr). (it only works on Windows) )
+
+_8)delf addr_
+
+(this command will remove your file in certain address)
