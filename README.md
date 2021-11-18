@@ -29,9 +29,9 @@ _6)userlist_
 
 (List Of Users On Your Computer and Has No Argument (it just works on windows) )
 	
-_7)cbground addr_
+_7)cbground_
 
-(This Command Will Change Your Desktop Wallpaper, You Should Enter The Photo Address After Command (addr). (it only works on Windows) )
+(This Command Will Change Your Desktop Wallpaper (it only works on Windows) )
 
 _8)delf addr_
 
